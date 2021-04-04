@@ -1,0 +1,286 @@
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+
+$theme-colors: (
+  "primary": #4499FF,
+);
+$blue: #4499FF;
+$yellow: #efff00;
+$h1-font-size: 1.5rem;
+$h2-font-size: 1.25rem;
+$light: #EAEAEA !default;
+//$h3-font-size:
+//$h4-font-size:
+//$h5-font-size:
+//$h6-font-size:
+
+
+@import "../node_modules/bootstrap-scss/functions";
+@import "../node_modules/bootstrap-scss/variables";
+@import "../node_modules/bootstrap-scss/mixins";
+@import "../node_modules/bootstrap-scss/root";
+@import "../node_modules/bootstrap-scss/reboot";
+@import "../node_modules/bootstrap-scss/type";
+
+h1, .h1 {
+  /*border-bottom: 1px solid #ccc;
+  padding-bottom: $spacer * .5;
+  margin-bottom: $spacer * 2;
+  */
+}
+.col-form-label {
+  text-align: right;
+}
+.main {
+  margin-bottom: 100px;
+}
+
+.csv-upload label {
+  @extend .col-sm-4;
+}
+
+/*
+ * Sidebar
+ */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding-left: 0 !important; /* Height of navbar */
+  padding-right: 0 !important; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  /*height: calc(100vh - 48px);*/
+  height: 100vh;
+  padding-top: .5rem;
+  padding-bottom: 2rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #ccc;
+  background: white;
+}
+
+@media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    transition-property: left, visibility;
+  }
+  .offcanvas-collapse.open {
+    left: 0;
+    visibility: visible;
+  }
+}
+
+
+@import "../node_modules/bootstrap-scss/images";
+@import "../node_modules/bootstrap-scss/code";
+@import "../node_modules/bootstrap-scss/grid";
+@import "../node_modules/bootstrap-scss/tables";
+@import "../node_modules/bootstrap-scss/forms";
+@import "../node_modules/bootstrap-scss/buttons";
+@import "../node_modules/bootstrap-scss/transitions";
+@import "../node_modules/bootstrap-scss/dropdown";
+@import "../node_modules/bootstrap-scss/button-group";
+@import "../node_modules/bootstrap-scss/input-group";
+@import "../node_modules/bootstrap-scss/custom-forms";
+@import "../node_modules/bootstrap-scss/nav";
+@import "../node_modules/bootstrap-scss/navbar";
+@import "../node_modules/bootstrap-scss/card";
+@import "../node_modules/bootstrap-scss/breadcrumb";
+@import "../node_modules/bootstrap-scss/pagination";
+@import "../node_modules/bootstrap-scss/badge";
+@import "../node_modules/bootstrap-scss/jumbotron";
+@import "../node_modules/bootstrap-scss/alert";
+@import "../node_modules/bootstrap-scss/progress";
+@import "../node_modules/bootstrap-scss/media";
+@import "../node_modules/bootstrap-scss/list-group";
+@import "../node_modules/bootstrap-scss/close";
+@import "../node_modules/bootstrap-scss/toasts";
+@import "../node_modules/bootstrap-scss/modal";
+@import "../node_modules/bootstrap-scss/tooltip";
+@import "../node_modules/bootstrap-scss/popover";
+@import "../node_modules/bootstrap-scss/carousel";
+@import "../node_modules/bootstrap-scss/spinners";
+@import "../node_modules/bootstrap-scss/utilities";
+@import "../node_modules/bootstrap-scss/print";
+
+.nav-item {
+    display: block;
+    padding: 0 0;
+    border-top: 1px solid white;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 0px;
+}
+.nav-link.active {
+    background-color: $yellow;
+}
+.nav-link:visited {
+  color: #8bc0ff;
+}
+fieldset fieldset > legend {
+  font-size: $h2-font-size;
+  font-weight: 500;
+}
+
+fieldset fieldset fieldset > legend {
+  font-size: $font-size-base;
+  font-weight: 500;
+}
+.field-array select.form-control {
+  min-height: 260px
+}
+.field-array > label, .field-string > label, .field-number > label {
+  font-weight: 500;
+}
+.form-group > fieldset > .form-group {
+  padding: 20px 0;
+}
+.form-group  > fieldset > .form-group  > fieldset > .form-group {
+  padding: 0px 0;
+}
+.help-block {
+  @extend .form-text;
+  @extend small;
+  @extend .text-muted;
+}
+
+/* select image */
+.select-img {
+    font-size: .8rem;
+    margin-top: 10px;
+    position: relative;
+}
+.select-img-img {
+    position: relative;
+    border: 1px solid transparent;
+}
+.selected .select-img-img {
+   box-shadow: 0px 0px 6px rgba(0,0,0,.75);
+    border: 1px solid $blue;
+}
+.select-img-img:hover, .select-img-img.select-hover {
+    box-shadow: 0px 0px 6px rgba(0,0,0,.75);
+    border: 1px solid $yellow;
+    cursor: pointer;
+}
+.select-remove {
+  position: absolute;
+  top:0;
+  right: 0px;
+}
+.selected .select-remove:before {
+   font-family: "Font Awesome 5 Free";
+   color: #ffffff;
+   /*content: "\f00d";*/
+   content: "\f057";
+   font-weight: 900;
+   font-size:30px;
+   position: absolute;
+   top: 6px;
+    right: 20px;
+    line-height: 1;
+   -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.select-view .select-img-img:after {
+   font-family: "Font Awesome 5 Free";
+   color: #bbbbbb;
+   content: "\f058";
+   font-weight: 900;
+   font-size:20px;
+   position: absolute;
+   bottom: 0px;
+   right: 5px;
+}
+.selected .select-img-img:after {
+   color: $blue;
+}
+.select-img-img:hover:after, .select-img-img.select-hover:after {
+   color: $yellow;
+}
+.selected .select-remove:hover:before {
+   color: $yellow;
+   font-size:40px;
+}
+.order-view .select-options {
+  position: absolute;
+  bottom: 2px;
+  right: 18px;
+}
+.btn-circle {
+  display:inline-block;
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
+  font-weight: 600;
+  border: 1px solid #bbbbbb;
+  color: #a2a2a2;
+  margin: 3px 2px;
+  background: white;
+}
+
+.btn-circle i {
+  position: relative;
+  top: -1px;
+}
+.btn-circle.selected {
+  border: 1px solid $blue;
+  background: $blue;
+  color: #fff
+}
+.btn-circle:hover, .btn-circle.select-hover {
+  border: 1px solid $yellow;
+  background: $yellow;
+  color: #212529
+}
+
+.order-view .btn-circle {
+  font-size: 15px;
+  width: 22px;
+  height: 22px;
+  line-height: 21px;
+}
+
+.list-pipe + .list-pipe::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    content: "|";
+}

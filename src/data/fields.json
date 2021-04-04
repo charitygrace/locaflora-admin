@@ -1,0 +1,385 @@
+{
+	"id": {
+		"label": "id",
+		"field": "number",
+		"display": "hidden"
+	},
+	"name": {
+		"label": "Scientific Name",
+		"help": "This field dervies the genus, species, ssp, v and cross. It's finicky so be careful and write the name correctly."
+	},
+	"reviewedData": {
+		"field": "boolean",
+		"label": "Reviewed"
+	},
+	"completeTrefleData": {
+		"field": "boolean",
+		"label": "Trefle Data was Complete",
+		"display": "hidden"
+	},
+	"taxa": {
+		"label": "Various Names / Taxa",
+		"genus": {
+			"label": "Genus",
+			"help": "Derived from the name field.",
+			"readOnly": true
+		},
+		"species": {
+			"label": "Species",
+			"help": "Derived from the name field.",
+			"readOnly": true
+		},
+		"scientificAlts": {
+			"label": "Alt Scientific Names",
+			"field": "array"
+		},
+		"ssp": {
+			"label": "Sub Species",
+			"help": "Derived from the name field.",
+			"readOnly": true
+		},
+		"v": {
+			"label": "Variety",
+			"help": "Derived from the name field.",
+			"readOnly": true
+		},
+		"x": {
+			"field": "boolean",
+			"label": "Cross",
+			"help": "Place the name of the cross in the name field."
+		},
+		"xparents": {
+			"label": "Cross Parents",
+			"field": "array"
+		},
+		"commonName": {
+			"label": "Common Name"
+		},
+		"commonAlts": {
+			"label": "Other Names",
+			"field": "array"
+		},
+		"scientificFamily": {
+			"label": "Plant Family"
+		},
+		"commonFamily": {
+			"label": "Family Common Name"
+		}
+	},
+	"plantTypes": {
+		"label": "Plant Types",
+		"options": [
+			"Annuals",
+			"Perennials",
+			"Wildflowers",
+			"Carnivorous",
+			"Bulbs",
+			"Ferns",
+			"Grasses - Sedges",
+			"Ground Covers",
+			"Shrubs",
+			"Trees",
+			"Vines",
+			"Water Plants"
+		]
+	},
+	"lifeCycle": {
+		"label": "Life Cycle",
+		"display": "radio",
+		"options": [
+			"Perennial",
+			"Biennial",
+			"Annual"
+		]
+	},
+	"lightNeeds": {
+		"label": "Light Needs",
+		"options": [
+			"Sun",
+			"Part Shade",
+			"Shade",
+			"Deep Shade"
+		]
+	},
+	"frostTolerant": {
+		"field": "boolean",
+		"label": "Frost Tolerant"
+	},
+	"soils": {
+		"label": "Soil Details",
+		"moistureNeeds": {
+			"label": "Soil Moisure",
+			"options": [
+				"Dry", "Moist", "Wet", "Aquatic"
+			]
+		},
+		"types": {
+			"label": "Soil Types",
+			"options": [
+				"Clay", "Loam", "Sandy / Rocky"
+			]
+		},
+		"phNeeds": {
+			"label": "Soil Ph",
+			"options": [
+				"Acid", "Neutral", "Alkaline"
+			]
+		},
+		"nitrogen": {
+			"field": "boolean",
+			"label": "Nitrogen Fixing"
+		}
+	},
+	"flowers": {
+		"label": "Flower Details",
+		"conspicuous": {
+      "field": "boolean",
+      "label": "Conspicuous Flowers"
+    },
+		"colors": {
+			"label": "Bloom Color",
+			"options": [
+				"White",
+				"Red",
+				"Pink",
+				"Orange",
+				"Yellow",
+				"Green",
+				"Blue",
+				"Lavender",
+				"Purple",
+				"Brown",
+				"Black"
+			]
+		},
+		"colorMain": {
+			"label": "Main Bloom Color",
+			"help": "If more than one Bloom Color, optionally select the color to use for display purposes.",
+			"display": "select",
+			"options": [
+				"White",
+				"Red",
+				"Pink",
+				"Orange",
+				"Yellow",
+				"Green",
+				"Blue",
+				"Lavender",
+				"Purple",
+				"Brown",
+				"Black"
+			]
+		},
+		"months": {
+			"label": "Bloom Period",
+			"options": [
+				"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"
+			]
+		},
+		"seasons": {
+			"label": "Bloom Seasons",
+			"options": [
+				"Spring",
+				"Summer",
+				"Fall",
+				"Winter"
+			]
+		}
+	},
+	"fruits": {
+		"label": "Fruits/Nuts/Seeds",
+		"conspicuous": {
+			"field": "boolean",
+			"label": "Conspicuous Fruits/Nuts/Seeds"
+		},
+		"colors": {
+			"label": "Fruit/Nut/Seed Color",
+			"options": [
+				"White",
+				"Red",
+				"Pink",
+				"Orange",
+				"Yellow",
+				"Green",
+				"Blue",
+				"Lavender",
+				"Purple",
+				"Brown",
+				"Black"
+			]
+		},
+		"months": {
+			"label": "Fruit/Nut/Seed Period",
+			"options": [
+				"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"
+			]
+		},
+		"seasons": {
+			"label": "Fruit/Nut/Seed Seasons",
+			"options": [
+				"Spring",
+				"Summer",
+				"Fall",
+				"Winter"
+			]
+		}
+	},
+	"leaves": {
+		"label": "Leaves",
+		"conspicuousFall": {
+			"field": "boolean",
+			"label": "Conspicuous in Fall"
+		},
+		"retention": {
+			"label": "Leaf Retention (non annual)",
+			"display": "radio",
+			"options": [
+				"Deciduous",
+				"Semi-Evergreen",
+				"Evergreen"
+			]
+		}
+	},
+	"gardens": {
+		"field": "boolean",
+		"label": "Good for Gardens"
+	},
+	"attracts": {
+		"label": "Attracts",
+		"options": [
+			"Bees",
+			"Butterflies and Moths",
+			"Caterpillars",
+			"Hummingbirds",
+			"Songbirds"
+		]
+	},
+	"tolerant": {
+		"label": "Tolerates",
+		"options": [
+			"Black Walnut",
+			"Deer",
+			"Drought",
+			"Frost",
+			"Pollution",
+			"Poor Soil",
+			"Salt"
+		]
+	},
+	"uses": {
+		"label": "Special Uses",
+		"options": [
+			"Aromatic",
+			"Edible Parts",
+			"Medicinal"
+		]
+	},
+	"problems": {
+		"label": "Problems",
+		"options": [
+			"Prone to Diseases",
+			"Skin Allergenic",
+			"Poisonous",
+			"Toxic",
+			"Weedy"
+		]
+	},
+	"height": {
+		"label": "Height",
+		"min": {
+			"label": "Minimum Height",
+			"field": "number"
+		},
+		"max": {
+			"label": "Maximum Height",
+			"field": "number"
+		},
+		"unit": {
+			"label": "Measurement Unit",
+			"display": "select",
+			"options": [
+				"ft",
+				"in",
+				"cm",
+				"m"
+			]
+		}
+	},
+	"spread": {
+		"label": "Spread",
+		"min": {
+			"label": "Minimum Spread",
+			"field": "number",
+			"help": "This number needs validation"
+		},
+		"max": {
+			"label": "Maximum Spread",
+			"field": "number",
+			"help": "This number needs validation"
+		},
+		"unit": {
+			"label": "Measurement Unit",
+			"display": "select",
+			"options": [
+				"ft",
+				"in",
+				"cm",
+				"m"
+			]
+		}
+	},
+	"ids": {
+		"label": "Sub Species",
+		"iNatId": {
+			"field": "number",
+			"label": "iNatId"
+		},
+		"natureServeId": {
+			"field": "number",
+			"label": "natureServeId"
+		},
+		"trefleId": {
+			"field": "number",
+			"label": "trefleId"
+		},
+		"usdaId": {
+			"label": "usdaId"
+		},
+		"mbgId": {
+			"label": "mbgId"
+		}
+	},
+	"native": {
+		"label": "Native to...",
+		"US": {
+			"label": "United States",
+			"display": "select-multiple",
+			"options": [
+				"AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA",
+				"HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA",
+				"MI", "MN", "MS", "MO", "MT", "NE", "NN", "NV", "NH", "NJ", "NM", "NY", "NC", "ND",
+				"OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT",
+				"VT", "VA", "WA", "WV", "WI", "WY"
+			]
+		},
+		"CA": {
+			"label": "Canada",
+			"display": "select-multiple",
+			"options": [
+				"AB", "BC", "MB", "NB", "NL", "NT", "NS", "NU", "ON", "PE", "QC", "SK", "YT"
+			]
+		}
+	},
+	"regions": {
+		"label": "Eco Regions",
+		"US:NC": {
+			"label": "North Carolina",
+			"display": "select-multiple",
+			"options": [
+				"Coastal Plain",
+				"Mountains",
+				"Piedmont"
+			]
+		}
+	}
+}

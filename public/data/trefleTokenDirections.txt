@@ -1,0 +1,5 @@
+//Get expiring client side token with this url (token only lasts a few hours)
+//trefleID = "MFBxR09FYmJ0THNzU1o4N3d1OEY2UT09";
+//websiteURL = "http://localhost:4000";
+
+curl -i -X POST "https://trefle.io/api/auth/claim?token=MFBxR09FYmJ0THNzU1o4N3d1OEY2UT09&origin=http://localhost:4000"
